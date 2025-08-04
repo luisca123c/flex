@@ -77,11 +77,11 @@
 .card__button{
     font-size: 40px;
     background-color: var(--fondos_claros);
-    color: white;
+    color: var(--letra_clara);
     padding: 10px;
     cursor: pointer;
     margin-top: 20px;
-    border: #1e2144;
+    border: var(--fondos);
 }
 .card__button--hover:hover{
     background-color: var(--letra_clara);
@@ -98,7 +98,7 @@
     margin: 0 auto;
     margin-bottom: 80px;
     justify-content: space-evenly;
-    align-content: space-around;
+    align-content: space-evenly;
 }
 .galeria__img{
     height: 200px;
@@ -108,13 +108,59 @@
 }
 /* -------------------------------------------------------------------------- */
 /* ejercicio 4 */
-.formulario{
+.formulary{
     display: flex;
-    height: 800px;
-    width: 1000px;
+    height: 700px;
+    width: 800px;
     margin: 0 auto;
     margin-bottom: 80px;
     background-color: var(--fondos);
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    text-align: center;
+}
+.formulario__div{
+    /* Contenedor para agrupar etiqueta y campo de entrada */
+    height: 100px;
+    background-color: var(--fondos);
+}
+
+.formulario__item{
+    /* Estilos para las etiquetas de los campos del formulario */
+    color: var(--letra_clara);
+    font-size: 30px;
+    background-color: var(--fondos);
+}
+.formulario__input{
+    /* Estilos para los campos de entrada de texto/número/email */
+    height: 30px;
+    width: 200px;
+    background-color: var(--color_secundario);
+    border: var(--fondos) solid 2px;
+    border-radius: 3px;
+    text-align: center;
+    color: var(--letra_oscura);
+}
+.formulario__input--placeholder::placeholder{
+    /* Estilos para el texto de sugerencia dentro de los campos de entrada */
+    color: rgb(54, 54, 54);
+}
+.formulario__button{
+    /* Estilos base para los botones de envío del formulario */
+    height: 30px;
+    width: 100px;
+    background-color: var(--color_secundario);
+    color: var(--letra_clara);
+    border: var(--fondo) solid 2px;
+    border-radius: 3px;
+}
+.formulario__button--hover:hover{
+    /* Efecto visual al pasar el ratón sobre los botones del formulario */
+    background-color: var(--fondo);
+    cursor: pointer;
+    border: var(--color_secundario) solid 2px;
+    border-radius: 3px;
 }
 /* -------------------------------------------------------------------------- */
 /* ejercicio 5 */
@@ -142,7 +188,7 @@
 .lista__li{
     /* Estilos para cada elemento individual de la lista de tareas */
     list-style: none;
-    color: white;
+    color: var(--letra_clara);
     font-size: 30px;
     text-align: left;
     background-color: var(--fondos);
