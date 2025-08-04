@@ -124,7 +124,29 @@
     margin: 0 auto;
     margin-bottom: 80px;
     background-color: var(--fondos);
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
+.lista__li{
+    /* Estilos para cada elemento individual de la lista de tareas */
+    list-style: none;
+    color: white;
+    font-size: 30px;
+    text-align: left;
+    background-color: var(--fondos);
+}
+.checkbox{
+    /* Estilos para los elementos de checkbox */
+    width: 25px;
+    height: 25px;
+}
+.lista__li--has:has(input[type="checkbox"]:checked) {
+    /* Aplica estilos especiales a un ítem de la lista si su checkbox está marcado */
+    color: #868688;
+    text-decoration: line-through;
+    opacity: 0.8;
+} 
 /* -------------------------------------------------------------------------- */
 /* ejercicio 7 */
 .testimonial{
