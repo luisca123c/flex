@@ -1,70 +1,89 @@
-:root{
+/* Definimos las variables de color globales para usar en todo el documento */
+:root {
     --fondos: #1e2144;
     --letra_clara: #e6e6e6;
     --fondos_claros: #5e67c9;
     --letra_oscura: black;
-    --color_secundario:#7F85C7;
+    --color_secundario: #7F85C7;
     --color_terciario: #3E458E;
     --color_cuaternario: #abb1f1;
 }
-*{
+
+/* Reiniciamos los márgenes y rellenos por defecto, y establecemos el modelo de caja */
+* {
     padding: 0;
     margin: 0;
     box-sizing: content-box;
+    /* Establecemos el color de fondo predeterminado para todos los elementos */
     background-color: var(--fondos_claros);
 }
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 1 */
-.navegacion{
+.navegacion {
+    /* Contenedor principal de la barra de navegación. Usamos flexbox para la distribución. */
     display: flex;
+    /* Los ítems se disponen en una fila y no se envuelven */
     flex-flow: row nowrap;
     width: 100%;
     height: 50px;
     background-color: var(--fondos);
+    /* Alineamos los ítems al final del contenedor */
     justify-content: flex-end;
+    /* Alineamos los ítems verticalmente en el centro */
     align-items: center;
+    /* Añadimos espacio entre los ítems */
     gap: 70px;
 }
-.navegacion__a{
+
+.navegacion__a {
+    /* Estilos para los enlaces de la navegación */
     color: var(--letra_clara);
     text-decoration: none;
-    background-color: var(--fondos);    
+    background-color: var(--fondos);
     margin-right: 40px;
     font-size: 20px;
 }
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 2 */
-.card{
-    /* Contenedor de una tarjeta de información (ej. para un producto o tema) */
+.card {
+    /* Contenedor de la tarjeta de producto. Los elementos se apilan verticalmente */
     display: flex;
     flex-flow: column nowrap;
     height: 800px;
     width: 700px;
     background-color: var(--fondos);
+    /* Distribuimos el espacio uniformemente entre los ítems */
     justify-content: space-evenly;
+    /* Centramos los ítems horizontalmente */
     align-items: center;
+    /* Centramos la tarjeta en la página */
     margin: 0 auto;
     margin-top: 80px;
     border-radius: 5px;
     margin-bottom: 80px;
 }
-.card__p{
-    /* Párrafo descriptivo dentro de la tarjeta, actúa como un encabezado secundario */
+
+.card__p {
+    /* Estilos para el título de la tarjeta */
     height: 23px;
     width: 610px;
     color: var(--letra_clara);
     font-size: 50px;
     text-align: center;
-    background-color: var(--fondos);    
+    background-color: var(--fondos);
 }
-.card__img{
-    /* Imagen principal dentro de la tarjeta */
+
+.card__img {
+    /* Estilos para la imagen dentro de la tarjeta */
     height: 400px;
     width: 350px;
     background-color: var(--fondos);
 }
-.card__h4{
-    /* Descripción o texto largo dentro de la tarjeta */
+
+.card__h4 {
+    /* Estilos para la descripción de la tarjeta */
     height: 80px;
     width: 610px;
     color: var(--letra_clara);
@@ -74,7 +93,9 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: lowercase;
 }
-.card__button{
+
+.card__button {
+    /* Estilos para el botón de la tarjeta */
     font-size: 40px;
     background-color: var(--fondos_claros);
     color: var(--letra_clara);
@@ -83,160 +104,207 @@
     margin-top: 20px;
     border: var(--fondos);
 }
-.card__button--hover:hover{
+
+.card__button--hover:hover {
+    /* Estilos que se aplican al pasar el mouse sobre el botón */
     background-color: var(--letra_clara);
     color: var(--letra_oscura);
 }
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 3 */
-.galeria{
+.galeria {
+    /* Contenedor de la galería de imágenes. Usamos flexbox para la distribución. */
     display: flex;
+    /* Los ítems se disponen en una fila y se envuelven a una nueva línea si no caben */
     flex-flow: row wrap;
     background-color: var(--fondos);
     height: 800px;
     width: 1000px;
+    /* Centramos la galería en la página */
     margin: 0 auto;
     margin-bottom: 80px;
+    /* Distribuimos el espacio entre los ítems horizontalmente */
     justify-content: space-evenly;
+    /* Distribuimos el espacio entre las líneas de ítems verticalmente */
     align-content: space-evenly;
 }
-.galeria__img{
+
+.galeria__img {
+    /* Estilos para las imágenes de la galería */
     height: 200px;
     width: 300px;
     background-color: var(--fondos);
     cursor: grab;
 }
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 4 */
 .formulario {
-  display: flex;
-  height: 700px;
-  width: 800px;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  background-color: var(--fondos);
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+    /* Contenedor del formulario. Usamos flexbox para organizar los campos. */
+    display: flex;
+    height: 700px;
+    width: 800px;
+    /* Centramos el formulario en la página */
+    margin: 0 auto;
+    margin-bottom: 80px;
+    background-color: var(--fondos);
+    /* Los ítems se disponen en columnas y se envuelven a una nueva columna */
+    flex-flow: column wrap;
+    /* Distribuimos el espacio uniformemente entre los ítems */
+    justify-content: space-evenly;
+    /* Centramos los ítems horizontalmente */
+    align-items: center;
+    text-align: center;
 }
 
 .formulario__div {
-  height: 100px;
-  background-color: var(--fondos);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    /* Contenedor para cada grupo de etiqueta e input */
+    height: 100px;
+    background-color: var(--fondos);
+    /* Usamos flexbox para organizar la etiqueta y el input verticalmente */
+    display: flex;
+    flex-direction: column;
+    /* Centramos el contenido dentro del div */
+    justify-content: center;
+    align-items: center;
 }
 
 .formulario__item {
-  color: var(--letra_clara);
-  font-size: 30px;
-  background-color: var(--fondos);
-  margin-bottom: 10px;
+    /* Estilos para las etiquetas */
+    color: var(--letra_clara);
+    font-size: 30px;
+    background-color: var(--fondos);
+    margin-bottom: 10px;
 }
 
 .formulario__input {
-  height: 30px;
-  width: 200px;
-  background-color: var(--color_secundario);
-  border: var(--fondos) solid 2px;
-  border-radius: 3px;
-  text-align: center;
-  color: var(--letra_oscura);
+    /* Estilos para los campos de entrada de texto */
+    height: 30px;
+    width: 200px;
+    background-color: var(--color_secundario);
+    border: var(--fondos) solid 2px;
+    border-radius: 3px;
+    text-align: center;
+    color: var(--letra_oscura);
 }
 
 .formulario__input--placeholder::placeholder {
-  color: rgb(54, 54, 54);
+    /* Estilos para el texto del placeholder */
+    color: rgb(54, 54, 54);
 }
 
 .formulario__button {
-  height: 30px;
-  width: 100px;
-  background-color: var(--color_secundario);
-  color: var(--letra_clara);
-  border: var(--fondo) solid 2px;
-  border-radius: 3px;
-  align-self: center;
+    /* Estilos para el botón de envío */
+    height: 30px;
+    width: 100px;
+    background-color: var(--color_secundario);
+    color: var(--letra_clara);
+    border: var(--fondo) solid 2px;
+    border-radius: 3px;
+    /* Alineamos el botón al centro de su columna */
+    align-self: center;
 }
 
 .formulario__button--hover:hover {
-  background-color: var(--fondo);
-  cursor: pointer;
-  border: var(--color_secundario) solid 2px;
-  border-radius: 3px;
+    /* Estilos que se aplican al pasar el mouse sobre el botón */
+    background-color: var(--fondo);
+    cursor: pointer;
+    border: var(--color_secundario) solid 2px;
+    border-radius: 3px;
 }
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 5 */
-.encabezado{
+.encabezado {
+    /* Contenedor del encabezado de la sección */
     display: flex;
+    /* Alineamos los ítems verticalmente en el centro */
     align-items: center;
+    /* Centramos los ítems horizontalmente */
     justify-content: center;
+    /* Añadimos espacio entre el icono y el título */
     gap: 20px;
     height: 100px;
     width: 800px;
+    /* Centramos el encabezado en la página */
     margin: 0 auto 80px;
     background-color: var(--fondos);
 }
 
 .encabezado__icono {
+    /* Estilos para el icono del encabezado */
     width: 50px;
     height: 50px;
     background-color: var(--fondos);
 }
 
 .encabezado__titulo {
+    /* Estilos para el título del encabezado */
     color: var(--letra_clara);
     font-size: 40px;
     background-color: var(--fondos);
 }
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 6 */
-.lista{
+.lista {
+    /* Contenedor de la lista de tareas. Los ítems se apilan verticalmente */
     display: flex;
     height: 800px;
     width: 800px;
+    /* Centramos la lista en la página */
     margin: 0 auto;
     margin-bottom: 80px;
     background-color: var(--fondos);
     flex-flow: column nowrap;
+    /* Distribuimos el espacio uniformemente entre los ítems */
     justify-content: space-evenly;
+    /* Centramos los ítems horizontalmente */
     align-items: center;
 }
-.lista__li{
-    /* Estilos para cada elemento individual de la lista de tareas */
+
+.lista__li {
+    /* Estilos para cada ítem de la lista */
     list-style: none;
     color: var(--letra_clara);
     font-size: 30px;
     text-align: left;
     background-color: var(--fondos);
 }
-.checkbox{
-    /* Estilos para los elementos de checkbox */
+
+.checkbox {
+    /* Estilos para las casillas de verificación */
     width: 25px;
     height: 25px;
 }
+
 .lista__li--has:has(input[type="checkbox"]:checked) {
-    /* Aplica estilos especiales a un ítem de la lista si su checkbox está marcado */
+    /* Estilos que se aplican a un ítem cuando su checkbox está marcado */
     color: #868688;
     text-decoration: line-through;
     opacity: 0.8;
-} 
+}
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 7 */
-.testimonial{
+.testimonial {
+    /* Contenedor del testimonial. Los ítems se organizan en una fila */
     display: flex;
+    /* Alineamos los ítems verticalmente en el centro */
     align-items: center;
+    /* Añadimos espacio entre el avatar y el texto */
     gap: 20px;
     height: 300px;
     width: 800px;
+    /* Centramos el testimonial en la página */
     margin: 0 auto 80px;
     background-color: var(--fondos);
     padding: 20px;
 }
 
 .testimonial__avatar {
+    /* Estilos para la imagen de perfil del testimonial */
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -244,12 +312,14 @@
 }
 
 .testimonial__contenido {
+    /* Contenedor para el texto del testimonial. Los elementos se apilan verticalmente */
     display: flex;
     flex-direction: column;
     background-color: var(--fondos);
 }
 
 .testimonial__texto {
+    /* Estilos para el texto del testimonial */
     font-style: italic;
     color: var(--letra_clara);
     background-color: var(--fondos);
@@ -257,26 +327,33 @@
 }
 
 .testimonial__autor {
+    /* Estilos para el nombre del autor del testimonial */
     margin-top: 10px;
     color: var(--color_secundario);
     background-color: var(--fondos);
     font-weight: bold;
 }
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 8 */
-.footer{
+.footer {
+    /* Contenedor del pie de página. Usamos flexbox para organizar las columnas */
     display: flex;
+    /* Distribuimos el espacio uniformemente alrededor de las columnas */
     justify-content: space-around;
-    align-items: flex-end;
+    /* Alineamos las columnas en la parte superior */
+    align-items: flex-start;
     height: 300px;
     width: 100%;
     max-width: 1200px;
+    /* Centramos el footer en la página */
     margin: 0 auto 80px;
     background-color: var(--fondos);
     padding: 20px;
 }
 
 .footer__columna {
+    /* Contenedor para cada columna del footer. Los elementos se apilan verticalmente */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -285,62 +362,125 @@
 }
 
 .footer__titulo {
+    /* Estilos para los títulos de las columnas del footer */
     font-size: 24px;
     border-bottom: 2px solid var(--letra_clara);
     padding-bottom: 10px;
     background-color: var(--fondos);
 }
 
-.footer__texto, .footer__enlace {
+.footer__texto,
+.footer__enlace {
+    /* Estilos para el texto y los enlaces del footer */
     background-color: var(--fondos);
     color: var(--letra_clara);
     text-decoration: none;
 }
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 9 */
-.precios{
+.precios {
+    /* Contenedor de las tarjetas de precios. Los ítems se organizan en una fila */
     display: flex;
-    height: 800px;
-    width: 1500px;
-    margin: 0 auto;
-    margin-bottom: 80px;
+    /* Centramos los ítems horizontalmente */
+    justify-content: center;
+    /* Centramos los ítems verticalmente */
+    align-items: center;
+    height: 500px;
+    width: 1200px;
+    /* Centramos la sección en la página */
+    margin: 0 auto 80px;
     background-color: var(--fondos);
+    /* Espacio entre las tarjetas */
+    gap: 30px;
 }
+
+.precios__tarjeta {
+    /* Estilos para cada tarjeta de precios. Los elementos se apilan verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border: 3px solid var(--color_secundario);
+    border-radius: 10px;
+    background-color: var(--color_terciario);
+    color: var(--letra_clara);
+    width: 300px;
+}
+
+.precios__tarjeta--destacada {
+    /* Estilos específicos para la tarjeta destacada */
+    background-color: var(--color_secundario);
+    border-color: var(--fondos);
+}
+
+.precios__titulo {
+    /* Estilos para el título de la tarjeta */
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.precios__monto {
+    /* Estilos para el monto del precio */
+    font-size: 50px;
+    font-weight: bold;
+    background-color: transparent;
+    margin: 20px 0;
+}
+
+.precios__lista {
+    /* Estilos para la lista de características */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.precios__caracteristica {
+    /* Estilos para cada ítem de la lista */
+    padding: 5px 0;
+    background-color: transparent;
+}
+
 /* -------------------------------------------------------------------------- */
 /* ejercicio 10 */
-.sidebar{
+.sidebar {
+    /* Contenedor de la barra lateral. Los ítems se apilan verticalmente */
     display: flex;
+    flex-direction: column;
+    /* Espacio entre los ítems */
+    gap: 20px;
+    padding: 20px;
     height: 800px;
-    width: 700px;
-    margin: 0 auto;
-    margin-bottom: 80px;
+    width: 400px;
+    /* Centramos la barra lateral en la página */
+    margin: 0 auto 80px;
     background-color: var(--fondos);
-    flex-flow: column wrap;
 }
-.sidebar2 {
-    /* Barra lateral de navegación o de información adicional */
-    width: 250px;
-    height: 765px;
-    background-color: var(--color_secundario);
-    border-radius: 15px;
-}
+
 .sidebar__titulo {
-    /* Título principal de la barra lateral */
+    /* Estilos para el título de la barra lateral */
+    color: var(--letra_clara);
     font-size: 30px;
-    color: var(--fondo);
-    text-align: center;
-    background-color: var(--color_secundario);
+    border-bottom: 2px solid var(--letra_clara);
+    padding-bottom: 10px;
+    background-color: var(--fondos);
 }
+
 .sidebar__enlace {
-    /* Estilos para los enlaces de navegación dentro de la barra lateral */
-    color: var(--card);
+    /* Estilos para los enlaces de la barra lateral */
     text-decoration: none;
+    color: var(--letra_clara);
     font-size: 20px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    background-color: var(--color_secundario);
+    padding: 10px;
+    background-color: var(--color_terciario);
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
+
 .sidebar__enlace:hover {
-    /* Efecto hover para los enlaces de la barra lateral */
-    background-color: #e3f0ff;
+    /* Estilos al pasar el mouse sobre los enlaces */
+    background-color: var(--color_cuaternario);
+    color: var(--letra_oscura);
 }
