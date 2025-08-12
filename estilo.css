@@ -266,11 +266,35 @@
 /* ejercicio 8 */
 .footer{
     display: flex;
-    height: 800px;
-    width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 80px;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 300px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 80px;
     background-color: var(--fondos);
+    padding: 20px;
+}
+
+.footer__columna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--fondos);
+    color: var(--letra_clara);
+}
+
+.footer__titulo {
+    font-size: 24px;
+    border-bottom: 2px solid var(--letra_clara);
+    padding-bottom: 10px;
+    background-color: var(--fondos);
+}
+
+.footer__texto, .footer__enlace {
+    background-color: var(--fondos);
+    color: var(--letra_clara);
+    text-decoration: none;
 }
 /* -------------------------------------------------------------------------- */
 /* ejercicio 9 */
