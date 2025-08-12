@@ -227,11 +227,40 @@
 /* ejercicio 7 */
 .testimonial{
     display: flex;
-    height: 800px;
-    width: 1500px;
-    margin: 0 auto;
-    margin-bottom: 80px;
+    align-items: center;
+    gap: 20px;
+    height: 300px;
+    width: 800px;
+    margin: 0 auto 80px;
     background-color: var(--fondos);
+    padding: 20px;
+}
+
+.testimonial__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--color_terciario);
+}
+
+.testimonial__contenido {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fondos);
+}
+
+.testimonial__texto {
+    font-style: italic;
+    color: var(--letra_clara);
+    background-color: var(--fondos);
+    font-size: 20px;
+}
+
+.testimonial__autor {
+    margin-top: 10px;
+    color: var(--color_secundario);
+    background-color: var(--fondos);
+    font-weight: bold;
 }
 /* -------------------------------------------------------------------------- */
 /* ejercicio 8 */
