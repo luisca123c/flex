@@ -108,59 +108,64 @@
 }
 /* -------------------------------------------------------------------------- */
 /* ejercicio 4 */
-.formulary{
-    display: flex;
-    height: 700px;
-    width: 800px;
-    margin: 0 auto;
-    margin-bottom: 80px;
-    background-color: var(--fondos);
-    flex-flow: column wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
-    text-align: center;
-}
-.formulario__div{
-    /* Contenedor para agrupar etiqueta y campo de entrada */
-    height: 100px;
-    background-color: var(--fondos);
+.formulario {
+  display: flex;
+  height: 700px;
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  background-color: var(--fondos);
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 
-.formulario__item{
-    /* Estilos para las etiquetas de los campos del formulario */
-    color: var(--letra_clara);
-    font-size: 30px;
-    background-color: var(--fondos);
+.formulario__div {
+  height: 100px;
+  background-color: var(--fondos);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.formulario__input{
-    /* Estilos para los campos de entrada de texto/número/email */
-    height: 30px;
-    width: 200px;
-    background-color: var(--color_secundario);
-    border: var(--fondos) solid 2px;
-    border-radius: 3px;
-    text-align: center;
-    color: var(--letra_oscura);
+
+.formulario__item {
+  color: var(--letra_clara);
+  font-size: 30px;
+  background-color: var(--fondos);
+  margin-bottom: 10px;
 }
-.formulario__input--placeholder::placeholder{
-    /* Estilos para el texto de sugerencia dentro de los campos de entrada */
-    color: rgb(54, 54, 54);
+
+.formulario__input {
+  height: 30px;
+  width: 200px;
+  background-color: var(--color_secundario);
+  border: var(--fondos) solid 2px;
+  border-radius: 3px;
+  text-align: center;
+  color: var(--letra_oscura);
 }
-.formulario__button{
-    /* Estilos base para los botones de envío del formulario */
-    height: 30px;
-    width: 100px;
-    background-color: var(--color_secundario);
-    color: var(--letra_clara);
-    border: var(--fondo) solid 2px;
-    border-radius: 3px;
+
+.formulario__input--placeholder::placeholder {
+  color: rgb(54, 54, 54);
 }
-.formulario__button--hover:hover{
-    /* Efecto visual al pasar el ratón sobre los botones del formulario */
-    background-color: var(--fondo);
-    cursor: pointer;
-    border: var(--color_secundario) solid 2px;
-    border-radius: 3px;
+
+.formulario__button {
+  height: 30px;
+  width: 100px;
+  background-color: var(--color_secundario);
+  color: var(--letra_clara);
+  border: var(--fondo) solid 2px;
+  border-radius: 3px;
+  align-self: center;
+}
+
+.formulario__button--hover:hover {
+  background-color: var(--fondo);
+  cursor: pointer;
+  border: var(--color_secundario) solid 2px;
+  border-radius: 3px;
 }
 /* -------------------------------------------------------------------------- */
 /* ejercicio 5 */
