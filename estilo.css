@@ -171,10 +171,24 @@
 /* ejercicio 5 */
 .encabezado{
     display: flex;
-    height: 800px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100px;
     width: 800px;
-    margin: 0 auto;
-    margin-bottom: 80px;
+    margin: 0 auto 80px;
+    background-color: var(--fondos);
+}
+
+.encabezado__icono {
+    width: 50px;
+    height: 50px;
+    background-color: var(--fondos);
+}
+
+.encabezado__titulo {
+    color: var(--letra_clara);
+    font-size: 40px;
     background-color: var(--fondos);
 }
 /* -------------------------------------------------------------------------- */
